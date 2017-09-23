@@ -1,0 +1,5 @@
+docker
+google-chrome
+r-app
+sublime-text
+visual-studio-code
