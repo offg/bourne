@@ -115,3 +115,4 @@ vim
 webp
 xz
 git-lfs
+heroku/brew/heroku

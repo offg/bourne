@@ -1,26 +1,11 @@
 #!/bin/sh
 
-# homebrew setup
-### installing homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-### updating homebrew
-brew update
-
-### install packages in brew list via brew
-brew install < brew_list.txt
-
-### install packages in brew cask list via brew cask
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-cask_package_list_filename='brew_cask_list.txt'
-cask_packages=`cat $cask_package_list_filename`
-for package_name in $cask_packages
-do
-    brew cask install $package_name
-done
+# Homebrew setup and installing its packages
+sh ./nicky_for_brewing
 
 # git config
 ### configure username and email
+cp ssh-config $HOME/.ssh/config
 git config --global user.name "Yuuki Fujita"
 git config --global user.email fujita@atama.plus
 
@@ -38,3 +23,10 @@ pyenv global 3.5.2
 pyenv refresh
 
 pip install -r pypackages.txt
+
+
+# vim set up
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+cp .vimrc ~/.vimrc
+vim +"PlugInstall" +:q
