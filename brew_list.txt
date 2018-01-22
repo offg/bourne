@@ -1,9 +1,18 @@
 bash-completion
+fontconfig
+freetype
+gd
 gdbm
 git-lfs
+graphviz
 heroku
 heroku-node
+jpeg
+libpng
+libtiff
+libtool
 libyaml
+nodebrew
 openssl
 perl
 postgresql
@@ -12,3 +21,4 @@ readline
 ruby
 sqlite
 vim
+webp
