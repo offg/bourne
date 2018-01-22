@@ -5,7 +5,13 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # autocompletion for git commands
-if [ -f ~/.git-completion.bash ]; then . ~/.git-completion.bash fi
+if [ -f ~/.git-completion.bash ]
+    then . ~/.git-completion.bash
+fi
 
 # postgres db location
 export PGDATA=/usr/local/var/postgres
+
+# locale settings
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
