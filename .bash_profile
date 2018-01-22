@@ -15,3 +15,8 @@ export PGDATA=/usr/local/var/postgres
 # locale settings
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+
+
+if [ -f ~/.bashrc ] ; then
+. ~/.bashrc
+fi
