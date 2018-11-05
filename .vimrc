@@ -59,6 +59,10 @@ syn keyword pythonSpecialWord self
 hi link pythonSpecialWord    Special
 hi link pythonDelimiter      Special
 
+"ctag
+nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
+nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
+
 let b:current_after_syntax = 'python'
 
 let &cpo = s:cpo_save
@@ -75,19 +79,18 @@ let g:python_highlight_all = 1
 
 setlocal omnifunc=jedi#completions
 
-
 "begin <syntastic config>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0 
-let g:syntastic_python_checkers = ['pyflakes', 'pep8']
+let g:syntastic_python_checkers = ['pyflakes']
 let g:jedi#show_call_signatures = "0"
-let g:syntastic_python_flake8_args='--ignore=F821,E302,E501'
+let g:syntastic_python_flake8_args = "--ignore=F821,E302,E501"
+let g:syntastic_python_flake8_args = "--max-line-length=160"
 "end <syntastic config>
 
 "begin <autopep config>
@@ -130,6 +133,9 @@ Plug 'nvie/vim-flake8'
 Plug 'jnurmine/Zenburn'
 Plug 'altercation/vim-colors-solarized'
 Plug 'w0ng/vim-hybrid'
+Plug 'leafgarland/typescript-vim'
+Plug 'jason0x43/vim-js-indent'
+Plug 'Quramy/tsuquyomi'
 call plug#end()
 
 
