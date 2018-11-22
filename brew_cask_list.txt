@@ -1,5 +1,7 @@
+atom
 docker
 google-chrome
+java
 r-app
 sublime-text
 visual-studio-code
