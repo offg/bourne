@@ -5,3 +5,7 @@ echo 'export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
+pyenv install 3.7.6
+pyenv global 3.7.6
+pyenv refresh
+

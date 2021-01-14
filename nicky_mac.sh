@@ -17,9 +17,9 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
 exec $SHELL -l
 
-### insatll python 3.5.2
-pyenv install 3.5.2
-pyenv global 3.5.2
+### insatll python 3.7.4
+pyenv install 3.7.4
+pyenv global 3.7.4
 pyenv refresh
 
 pip install -r pypackages.txt
